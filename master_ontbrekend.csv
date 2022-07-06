@@ -1,0 +1,438 @@
+,code,naam,sem,prof
+0,H01U3C,Computationeel ontwerpen,Eerste semester,['A.Vande Moere']
+1,H06V4A,Scheikunde,Eerste semester,"['B.Goderis', 'N.Knoops']"
+2,H0P86A,Building Acoustics,Eerste semester,['E.Reynders']
+3,H0S33A,"Constructie van gebouwen, deel 1: hoorcollege",Eerste semester,['K.Allacker']
+4,H01Y3A,"Constructie van gebouwen, deel 3",Eerste semester,"['G.Roels', 'G.Van Den Bogaert']"
+5,H01W6B,Architecturale en stedelijke simulatie,Beide semesters,['A.Vande Moere']
+6,H01S4B,"Architectuurtheorie, deel 1",Eerste semester,['H.Heynen']
+7,H01W2B,Theory and History of Urban Design,Eerste semester,"[""V.d'Auria""]"
+8,H01T7D,Architectuurontwerp 1A,Eerste semester,"['B.Oelbrandt', 'S.Flebus', 'E.Van Meerbeek', 'K.Vandenhende']"
+9,H01T8A,"Ontwerpmedia en vormleer, deel 1",Beide semesters,"['E.Van Meerbeek', 'B.Oelbrandt', 'K.Vandenhende']"
+10,H01V5D,Architectuurontwerp 2A,Eerste semester,"['G.Lams', 'G.De Neuter', 'D.Driesen', 'M.Schevenels', 'K.Vandenhende']"
+11,H01W0A,Architectuurontwerp 2C: bouwtechnische aspecten,Beide semesters,"['G.Lams', 'G.De Neuter', 'D.Driesen', 'M.Schevenels']"
+12,H0S24A,"Ontwerpmedia en vormleer, deel 2",Beide semesters,"['G.Lams', 'G.De Neuter', 'D.Driesen', 'K.Vandenhende']"
+13,H01W8B,Architectuurontwerp 3A,Eerste semester,"['G.Desmet', 'K.Allacker', 'K.Vandenhende', 'I.Vanhamme']"
+14,H0H95A,"Ontwerpmedia en vormleer, deel 3",Beide semesters,"['G.Desmet', 'K.Vandenhende', 'I.Vanhamme']"
+15,H01D8B,Numerieke wiskunde,Eerste semester,"['K.Meerbergen', 'D.Nuyens']"
+16,H01C4B,Wijsbegeerte,Eerste semester,"['S.Rummens', 'F.Dewulf']"
+17,H0H49A,Hydraulica,Eerste semester,['E.Toorman']
+18,H0H55A,P&O Bouwkunde,Beide semesters,"['H.Janssen', 'S.FranÃ§ois', 'E.Verstrynge', 'O.Cizer']"
+19,H01R4C,P&O: chemische technologie,Beide semesters,"['K.Bernaerts', 'C.Clasen', 'J.DegrÃ¨ve', 'P.Moldenaers', 'I.Smets', 'T.Van Gerven', 'P.Van Puyvelde', 'B.Van der Bruggen']"
+20,H06U1A,ArtificiÃ«le intelligentie,Eerste semester,['L.De Raedt']
+21,H0N65A,Inleiding tot gegevensbanken,Eerste semester,['A.Kimmig']
+22,H01Q3C,P&O: computerwetenschappen,Beide semesters,"['D.Nuyens', 'H.Blockeel', 'A.Simeone', 'B.Jacobs']"
+23,H01Q6C,P&O: elektrotechniek,Beide semesters,"['M.Verhelst', 'A.Bertrand', 'S.Pollin', 'V.Rijmen', 'T.Tuytelaars', 'R.Vazquez Sabariego', 'P.Patrinos', 'P.Wambacq', 'I.Taurino', 'R.Detry']"
+24,H0T33A,P&O: materiaalkunde: bachelorproef,Beide semesters,"['M.Wevers', 'J.Fransaer', 'J.Vleugels']"
+25,H01P7C,P&O: werktuigkunde,Beide semesters,"['D.Reynaerts', 'W.Desmet', 'K.Thaels', 'B.Van Hooreweder', 'D.Vandepitte', 'B.Vrancken']"
+26,H09O0B,Ontwerpen in de medische technologie,Beide semesters,"['J.Vander Sloten', 'A.Bertrand', 'S.De Buck', 'M.De Vos', 'W.Dehaene', 'N.Famaey', 'F.Maes', 'H.Van Oosterwyck', 'D.Vandermeulen', 'G.van Lenthe', 'M.Blaschko']"
+27,H06I3A,"Installaties in gebouwen: sanitair, verwarming en ventilatie",Beide semesters,['D.Saelens']
+28,H03L0A,"Constructie van gebouwen, deel 4",Beide semesters,"['G.Roels', 'M.Schevenels', 'G.Van Den Bogaert']"
+29,C00M1A,Bouwrecht,Eerste semester,['K.Deketelaere']
+30,H03L2A,Architectuuractualia,Eerste semester,"['A.Vande Moere', 'C.Shu']"
+31,H03N9A,Masterproef,Beide semesters,['A.Jelic']
+32,H03Z0A,Built Heritage Conservation,Eerste semester,['T.Coomans de BrachÃ¨ne']
+33,H09N7A,Design Theories and Methods,Eerste semester,['P.Vermeersch']
+34,H03M1A,Vernieuwbouw,Eerste semester,"['S.Cools', 'J.Ruland', 'E.Verstrynge']"
+35,H03V0A,Architectuurkritiek: bijzondere problemen,Eerste semester,['K.Van Synghel']
+36,H03L5B,Architectuurontwerp 4A: complex programma nieuwbouw,Eerste semester,"['B.Verstraete', 'J.Moonen']"
+37,H03M3B,Architectuurontwerp 5: interieur,Eerste semester,"['S.Flebus', 'K.Vandenhende']"
+38,H03M2A,Interieur en meubilair in de 20ste eeuw,Eerste semester,"['H.Heynen', 'K.Vandenhende']"
+39,H03N3B,Architectuurontwerp 4A: constructief/infrastructureel ontwerp,Eerste semester,"['T.Vermeylen', 'M.Schevenels', 'L.Van Broeck']"
+40,H03W9A,Architectuurontwerp 5: bouwkundig detailleren,Eerste semester,"['R.Mols', 'G.Roels']"
+41,H02L4A,Theory and Practice of Urbanism since 1945,Eerste semester,['B.De Meulder']
+42,H03N1A,Landscape Architecture,Eerste semester,['S.Shannon']
+43,H03M4B,Architectuurontwerp 4A: stedelijk weefsel/stadsproject,Eerste semester,"['W.Verbakel', 'Y.Gerrits']"
+44,H02O3A,Project Development and Management,Eerste semester,"['B.De Meulder', 'J.Marin']"
+45,H01Z9A,Architectuurontwerp 5: stedelijke buitenruimte,Eerste semester,['W.Verbakel']
+46,H05U5A,Capita selecta ingenieurswetenschappen I.1. (Athens / Summer Course),Eerste semester,['J.Vander Sloten']
+47,H04K9A,Capita selecta ingenieurswetenschappen II.1. (Athens / Summer Course),Eerste semester,['J.Vander Sloten']
+48,H04B3A,Engels in de bedrijfsomgeving,Beide semesters,"['A.Laffut', 'A.De Geest']"
+49,H04B4A,Frans in de bedrijfsomgeving,Beide semesters,['A.Bertels']
+50,W0AE0A,Lessen voor de 21ste eeuw,Beide semesters,"['B.Pattyn', ""P.d'Hoine""]"
+51,H03W3A,"Architectuurgeschiedenis A, capita selecta",Eerste semester,"['K.De Jonge', 'T.Coomans de BrachÃ¨ne']"
+52,H0S25A,"Architectuurgeschiedenis B, capita selecta",Eerste semester,"['T.Coomans de BrachÃ¨ne', 'K.De Jonge']"
+53,H03W2A,Architectuurgeschiedenis: onderzoeksmethodologie,Eerste semester,"['K.De Jonge', 'T.Coomans de BrachÃ¨ne']"
+54,H05L7A,Renovation of Structures,Eerste semester,"['K.Van Balen', 'E.Verstrynge']"
+55,H0H17A,Digital and Robotic Fabrication in Architecture,Beide semesters,['A.Vande Moere']
+56,H03U1A,Inclusive Design,Beide semesters,['P.Vermeersch']
+57,H0P02A,Modernity and Urbanity: Capita Selecta from Architectural Theory and Criticism. Critical Analysis of Texts and Projects,Eerste semester,"['H.Heynen', 'A.Loeckx']"
+58,H03N8A,Praktijkstage,Eerste semester,"['A.Heylighen', 'K.Coomans']"
+59,H9X43A,Fire Protection and Building Safety,Eerste semester,['B.Merci']
+60,H02I0A,Lawaaibeheersing,Eerste semester,['E.Reynders']
+61,H03W0A,Aanvullingen beton,Eerste semester,['L.Vandewalle']
+62,H03V5C,Advanced Building Materials Science,Eerste semester,"['K.Van Balen', 'O.Cizer']"
+63,H0T92A,Transport Infrastructure Planning and Appraisal,Eerste semester,['M.De Ceuster']
+64,H02P4A,Human Settlements in Development,Eerste semester,"[""V.d'Auria""]"
+65,G0S30A,Housing and the city,Eerste semester,['M.Aalbers']
+66,H02S1A,Urban Studies,Eerste semester,"[""V.d'Auria"", 'J.Stevens']"
+67,H0N44A,Numerical Modelling in Biomedical Engineering,Eerste semester,"['G.van Lenthe', 'M.Baelmans', 'W.Desmet', 'N.Famaey', 'J.Meyers']"
+68,H03J2A,Biofluid Mechanics,Eerste semester,['P.Verdonck']
+69,H03J9A,Masterproef,Beide semesters,['F.Maes']
+70,H03K6A,IndustriÃ«le stage: Biomedische Technologie / Industrial Internship: Biomedical Engineering,Eerste semester,"['A.Ranga', 'F.Maes', 'M.Moonen', 'J.Vander Sloten']"
+71,H05F3A,Digitale signaalverwerking voor communicatie- en informatiesystemen,Eerste semester,"['M.Moonen', 'A.Bertrand']"
+72,H03K5A,Medische informatiesystemen m.i.v. beeldnetwerken en telematica,Eerste semester,"['E.Bellon', 'B.Van den Bosch']"
+73,H05B3A,Analoge en gemengde bouwblokken voor signaalverwerking,Eerste semester,['G.Gielen']
+74,H06W1A,Selected Topics in Biomedical Signal Processing,Eerste semester,"['A.Bertrand', 'L.De Lathauwer', 'M.De Vos']"
+75,H06W8A,Medical Image Analysis and Processing: Part II,Eerste semester,['F.Maes']
+76,H04P3C,Dimensionele meettechniek,Eerste semester,['H.Haitjema']
+77,H0S54B,Kwaliteitscontrole en geavanceerde niet-destructieve testtechnieken,Eerste semester,"['M.Wevers', 'I.De Wolf', 'G.Kerckhofs']"
+78,D0I62A,Principles of Database Management,Eerste semester,"['W.Lemahieu', 'B.Baesens']"
+79,H02C1A,Machine Learning and Inductive Inference,Eerste semester,['H.Blockeel']
+80,L01N7A,Research Topics in Human Movement Biomechanics,Eerste semester,"['I.Jonkers', 'F.De Groote', 'B.Vanwanseele']"
+81,H0N47A,Advanced Tissue Mechanics,Eerste semester,"['G.van Lenthe', 'N.Famaey']"
+82,H0N50A,Artificial Organs and Tissue Engineering,Eerste semester,"['H.Van Oosterwyck', 'F.De Somer', 'L.Fresiello', 'B.Meyns', 'A.Ranga']"
+83,E09O2A,Foundations of Bioethics,Eerste semester,"['C.Gastmans', 'Y.Denier']"
+84,S0B88A,Genderstudies,Beide semesters,['V.Draulans']
+85,E02N9A,Ethiek en recht in het biomedisch onderzoek,Eerste semester,"['K.Dierickx', 'S.Lierman']"
+86,H06M8A,Bedrijfservaring: Biomedische Technologie / Industrial Experience: Biomedical Engineering,Eerste semester,"['A.Ranga', 'F.Maes', 'M.Moonen', 'J.Vander Sloten']"
+87,D0S18A,Technology Entrepreneurship and New Business Development,Beide semesters,['J.Debrulle']
+88,H03J2A,Biofluid Mechanics,First term,['P.Verdonck']
+89,H0N44A,Numerical Modelling in Biomedical Engineering,First term,"['G.van Lenthe', 'M.Baelmans', 'W.Desmet', 'N.Famaey', 'J.Meyers']"
+90,L01N7A,Research Topics in Human Movement Biomechanics,First term,"['I.Jonkers', 'F.De Groote', 'B.Vanwanseele']"
+91,H06W8A,Medical Image Analysis and Processing: Part II,First term,['F.Maes']
+92,H0N47A,Advanced Tissue Mechanics,First term,"['G.van Lenthe', 'N.Famaey']"
+93,H0N50A,Artificial Organs and Tissue Engineering,First term,"['H.Van Oosterwyck', 'F.De Somer', 'L.Fresiello', 'B.Meyns', 'A.Ranga']"
+94,H05F1A,Digital Signal Processing for Communications and Information Systems,First term,"['M.Moonen', 'A.Bertrand']"
+95,H06A3A,Analog and Mixed-Signal Electronics for Signal Processing,First term,['G.Gielen']
+96,H06W1A,Selected Topics in Biomedical Signal Processing,First term,"['A.Bertrand', 'L.De Lathauwer', 'M.De Vos']"
+97,D0I62A,Principles of Database Management,First term,"['W.Lemahieu', 'B.Baesens']"
+98,H02C1A,Machine Learning and Inductive Inference,First term,['H.Blockeel']
+99,H05U5A,Capita selecta ingenieurswetenschappen I.1. (Athens / Summer Course),First term,['J.Vander Sloten']
+100,H03K6A,IndustriÃ«le stage: Biomedische Technologie / Industrial Internship: Biomedical Engineering,First term,"['A.Ranga', 'F.Maes', 'M.Moonen', 'J.Vander Sloten']"
+101,I0D35A,Introduction to Genetics,First term,"['F.Volckaert', 'A.Vandamme', 'P.Lemey', 'F.Van den Broeck', 'S.Vonesch']"
+102,I0D53A,Evolutionary and Quantitative Genetics,First term,"['P.Lemey', 'I.Cleynen', 'F.Volckaert', 'J.Swaegers']"
+103,G0P75B,Statistical Inference and Data Analysis,First term,['I.Gijbels']
+104,I0V02A,Integration of Biological Responses in Process Management,First term,"['T.Norton', 'J.Aerts']"
+105,H04K9A,Capita selecta ingenieurswetenschappen II.1. (Athens / Summer Course),First term,['J.Vander Sloten']
+106,E09O2A,Foundations of Bioethics,First term,"['C.Gastmans', 'Y.Denier']"
+107,D0H36A,Innovation Management and Strategy,First term,['B.Van Looy']
+108,H06M8A,Bedrijfservaring: Biomedische Technologie / Industrial Experience: Biomedical Engineering,First term,"['A.Ranga', 'F.Maes', 'M.Moonen', 'J.Vander Sloten']"
+109,H0N75A,Prestatiegericht ontwerp van de gebouwschil,Eerste semester,['G.Roels']
+110,H0N76A,Project gebouwentechniek 1,Eerste semester,"['H.Janssen', 'G.Roels']"
+111,H0N79A,Project Gebouwentechniek 2,Beide semesters,['G.Roels']
+112,H0N80A,"Gebouwsimulatie, deel 2",Eerste semester,[]
+113,H0N81A,Project gebouwentechniek 3,Eerste semester,[]
+114,H0P89A,"Structural Components: Steel, Part 2",Eerste semester,[]
+115,H0P90A,Durability of Concrete Structures,Eerste semester,['O.Cizer']
+116,H0P92A,Nonlinear Structural Mechanics,Eerste semester,['S.FranÃ§ois']
+117,H0P95A,Project Structural Engineering 2,Eerste semester,[]
+118,H0P97A,Hydrodynamics,Eerste semester,"['E.Toorman', 'J.Monbaliu']"
+119,H0N37A,Hydraulic Structures,Eerste semester,[]
+120,H0N38A,Dredging Technology,Eerste semester,"['G.Vanneste', 'J.Fordeyn']"
+121,H0N53A,Project Hydraulic Engineering 2,Eerste semester,[]
+122,H03U0A,Masterproef,Beide semesters,['O.Cizer']
+123,H03T0A,Bedrijfservaring: bouwkunde,Eerste semester,['J.Monbaliu']
+124,H03T1A,IndustriÃ«le stage: bouwkunde,Eerste semester,['J.Monbaliu']
+125,G0P08C,Topografie,Eerste semester,"['M.Vergauwen', 'G.Verstraeten']"
+126,H0N55A,Rock Mechanics,Eerste semester,['A.Vervoort']
+127,H0A07A,Traffic Engineering,Eerste semester,['C.TampÃ¨re']
+128,W0EN7A,Philosophy of Technology,Eerste semester,['L.Lauwaert']
+129,H0P75A,"Structural Elements: Reinforced Concrete, Part 2 and Prestressed Concrete",First term,['L.Vandewalle']
+130,H05L7A,Renovation of Structures,First term,"['K.Van Balen', 'E.Verstrynge']"
+131,H0P86A,Building Acoustics,First term,['E.Reynders']
+132,H0P89A,"Structural Components: Steel, Part 2",First term,[]
+133,H0P90A,Durability of Concrete Structures,First term,['O.Cizer']
+134,H0P92A,Nonlinear Structural Mechanics,First term,['S.FranÃ§ois']
+135,H0P95A,Project Structural Engineering 2,First term,[]
+136,H0P97A,Hydrodynamics,First term,"['E.Toorman', 'J.Monbaliu']"
+137,H0N37A,Hydraulic Structures,First term,[]
+138,H0N38A,Dredging Technology,First term,"['G.Vanneste', 'J.Fordeyn']"
+139,H0N53A,Project Hydraulic Engineering 2,First term,[]
+140,H03T0A,Bedrijfservaring: bouwkunde,First term,['J.Monbaliu']
+141,H03T1A,IndustriÃ«le stage: bouwkunde,First term,['J.Monbaliu']
+142,H9X43A,Fire Protection and Building Safety,First term,['B.Merci']
+143,H02I0A,Lawaaibeheersing,First term,['E.Reynders']
+144,H03W0A,Aanvullingen beton,First term,['L.Vandewalle']
+145,H03V5C,Advanced Building Materials Science,First term,"['K.Van Balen', 'O.Cizer']"
+146,H03M1A,Vernieuwbouw,First term,"['S.Cools', 'J.Ruland', 'E.Verstrynge']"
+147,G0P08C,Topografie,First term,"['M.Vergauwen', 'G.Verstraeten']"
+148,H0N55A,Rock Mechanics,First term,['A.Vervoort']
+149,H0A07A,Traffic Engineering,First term,['C.TampÃ¨re']
+150,H0T92A,Transport Infrastructure Planning and Appraisal,First term,['M.De Ceuster']
+151,H06B4A,Dutch Language and Cultures,First term,"['L.De Wachter', 'S.Van Aken']"
+152,W0EN7A,Philosophy of Technology,First term,['L.Lauwaert']
+153,H05A8A,Toegepaste fysische scheikunde,Eerste semester,['S.Kuhn']
+154,H06H0A,Systeemanalyse van chemische processen,Eerste semester,['S.Waldherr']
+155,H04E3B,Ontwerpen van chemische productie-eenheden,Eerste semester,['P.Van Lith']
+156,H06I1A,Management uitdagingen in de chemische industrie,Eerste semester,[]
+157,H06I5A,Watertechnologie,Eerste semester,['B.Van der Bruggen']
+158,H9XA8A,Technieken voor afvalwaterzuivering,Eerste semester,"['B.Van der Bruggen', 'I.Smets']"
+159,H06J5A,Bioconversietechnologie,Eerste semester,['I.Smets']
+160,H08P0A,Explosion Safety,Eerste semester,"['F.Verplaetsen', 'F.Van den Schoor']"
+161,H0T43A,Structural Integrity of Process Installations,Eerste semester,['K.Bernaerts']
+162,H08K4A,Selected Topics: Safety in Unit Operations,Beide semesters,"['G.Vercruysse', 'J.DegrÃ¨ve', 'T.Van Gerven']"
+163,H06J0A,IndustriÃ«le stage: Chemische Technologie / Industrial Internship: Chemical Engineering,Eerste semester,['J.DegrÃ¨ve']
+164,H06J2A,Bedrijfservaring: Chemische Technologie / Industrial Experience: Chemical Engineering,Eerste semester,['J.DegrÃ¨ve']
+165,H07S0A,Stage studiebegeleiding: chemische technologie,Beide semesters,['I.Smets']
+166,H0E79A,Toegepaste reologie,Eerste semester,['E.Koos']
+167,H06J8A,Meten en beheersen van luchtverontreiniging,Eerste semester,['T.Van Gerven']
+168,H06L0A,Exergie route voor duurzame chemie,Eerste semester,['T.Van Gerven']
+169,H06K7A,Masterproef,Beide semesters,['I.Smets']
+170,D0H36A,Innovation Management and Strategy,Eerste semester,['B.Van Looy']
+171,H06T1A,Applied Physical Chemistry,First term,"['S.Kuhn', 'J.Martens']"
+172,H06T4A,Systems Analysis of Chemical Processes,First term,"['S.Waldherr', 'J.DegrÃ¨ve']"
+173,H09D6A,Chemical Process Design,First term,['P.Van Lith']
+174,H09D9A,Management Challenges in the Chemical Industry,First term,"['I.Smets', 'R.Keldermans']"
+175,H09E0A,Water Technology,First term,['B.Van der Bruggen']
+176,H09F2A,Bioconversion Technology,First term,['K.Bernaerts']
+177,H0T43A,Structural Integrity of Process Installations,First term,['K.Bernaerts']
+178,H08P0A,Explosion Safety,First term,"['F.Verplaetsen', 'F.Van den Schoor']"
+179,H06J0A,IndustriÃ«le stage: Chemische Technologie / Industrial Internship: Chemical Engineering,First term,['J.DegrÃ¨ve']
+180,H06J2A,Bedrijfservaring: Chemische Technologie / Industrial Experience: Chemical Engineering,First term,['J.DegrÃ¨ve']
+181,H0E81A,Applied Rheology,First term,['E.Koos']
+182,H09F4A,Air Pollution and Control,First term,"['T.Van Gerven', 'B.Van der Bruggen']"
+183,H04J9B,Ontwerp van softwaresystemen,Eerste semester,['R.Wuyts']
+184,H0E96A,Beginselen van machine learning,Eerste semester,"['H.Blockeel', 'L.De Raedt']"
+185,H04L2A,Software for Real-time and Embedded Systems,Eerste semester,"['Y.Berbers', 'D.Hughes']"
+186,H0A12A,Geavanceerde methodes voor softwarearchitectuur,Eerste semester,"['W.Joosen', 'D.Weyns']"
+187,H04G7A,Capita Selecta Computer Science: Distributed Systems,Beide semesters,"['W.Joosen', 'T.Holvoet', 'D.Hughes']"
+188,H04K5A,Development of Secure Software,Eerste semester,['F.Piessens']
+189,H05M8B,Capita Selecta Computer Science: Secure Software,Beide semesters,"['F.Piessens', 'D.Devriese', 'B.Jacobs']"
+190,G0K32A,Vereistenanalyse voor complexe softwaresystemen,Eerste semester,"['M.Vanhoef', 'E.Steegmans']"
+191,H05D9A,Cryptografie en netwerkbeveiliging,Eerste semester,"['B.Preneel', 'V.Rijmen']"
+192,H05N0A,Capita Selecta Computer Science: Artificial Intelligence,Beide semesters,"['T.Guns', 'J.Bekker', 'G.Marra', 'T.Schrijvers']"
+193,H00Y4A,Big Data Analytics Programming,Beide semesters,['J.Davis']
+194,H02A6A,Speech Recognition,Eerste semester,['D.Van Compernolle']
+195,H02B1A,Natural Language Processing,Eerste semester,['M.Moens']
+196,G0L15B,Capita selecta van de software engineering,Beide semesters,"['B.Jacobs', 'W.Joosen', 'S.Michiels']"
+197,G0Q55A,Fundamenten van mens-machine-interactie,Eerste semester,"['K.Verbert', 'R.De Croon', 'A.Simeone']"
+198,H05N2A,"Capita selecta, mens-machinecommunicatie en multimedia",Beide semesters,"['P.DutrÃ©', 'A.Simeone']"
+199,H04I9A,IndustriÃ«le stage: Computerwetenschappen / Industrial Internship: Computer Science,Eerste semester,"['Y.Berbers', 'W.Joosen']"
+200,H04J4A,Masterproef,Beide semesters,['G.Janssens']
+201,H04G0A,Bedrijfservaring: Computerwetenschappen / Industrial Experience: Computer Science,Eerste semester,"['Y.Berbers', 'W.Joosen']"
+202,W0Q19A,Philosophy of Science / Natural Philosophy: Advanced Course,Eerste semester,"['S.Wenmackers', 'C.Maes']"
+203,W0T14A,Wetenschapsfilosofie / natuurfilosofie: verdiepende cursus,Eerste semester,"['S.Wenmackers', 'C.Maes']"
+204,H0N00A,Design of Software Systems,First term,['R.Wuyts']
+205,H0E98A,Principles of Machine Learning,First term,"['J.Davis', 'A.Kimmig']"
+206,H02A0A,Fundamentals of Artificial Intelligence,First term,['T.Guns']
+207,H0N21A,Introduction to ICT Security,First term,"['M.Vanhoef', 'B.Preneel']"
+208,H04K5A,Development of Secure Software,First term,['F.Piessens']
+209,H04L2A,Software for Real-time and Embedded Systems,First term,"['Y.Berbers', 'D.Hughes']"
+210,H05E1A,Cryptography and Network Security,First term,"['B.Preneel', 'V.Rijmen']"
+211,H02A6A,Speech Recognition,First term,['D.Van Compernolle']
+212,H02B1A,Natural Language Processing,First term,['M.Moens']
+213,H04G0A,Bedrijfservaring: Computerwetenschappen / Industrial Experience: Computer Science,First term,"['Y.Berbers', 'W.Joosen']"
+214,H04I9A,IndustriÃ«le stage: Computerwetenschappen / Industrial Internship: Computer Science,First term,"['Y.Berbers', 'W.Joosen']"
+215,H0E83A,Ontwerp en implementatie van analoge schakelingen,Eerste semester,"['P.Reynaert', 'F.Tavernier']"
+216,H05D7A,Computer-Aided IC Design,Eerste semester,"['G.Gielen', 'M.Steyaert']"
+217,H05E9A,Electromagnetic Interference in Analogue and Digital Systems,Eerste semester,['G.Vandenbosch']
+218,H05H2A,Compute Platforms for AI and Embedded Processing,Eerste semester,"['M.Verhelst', 'W.Dehaene']"
+219,H09I9A,Design of RF and mm-Wave Integrated Circuits,Eerste semester,"['P.Reynaert', 'M.Steyaert']"
+220,H06F2A,Semiconductor Physics,Eerste semester,['B.SorÃ©e']
+221,H06G4A,Materials Physics and Technology for Nanoelectronics,Eerste semester,"['C.Merckling', 'F.Molina Lopez']"
+222,H04A0A,Power Systems,Eerste semester,['J.Beerten']
+223,H0E87A,Numerieke methoden voor elektrotechnische toepassingen,Eerste semester,['R.Vazquez Sabariego']
+224,H04C8A,Electromobility,Eerste semester,"['J.Driesen', 'K.De GussemÃ©']"
+225,H04E8A,Veiligheid in elektrische installaties,Eerste semester,"['F.Vanwynsberghe', 'G.Deconinck']"
+226,H03E1B,System Identification and Modeling,Eerste semester,['B.De Moor']
+227,H05S2A,Telecommunications and Security Management,Eerste semester,"['D.Schreurs', 'N.Smart']"
+228,H09L2A,Privacy Technologies,Eerste semester,['M.Diaz Martinez']
+229,H05T6A,Telecom Systems: Capita Selecta,Eerste semester,"['S.Pollin', 'I.Fernandez-Hernandez']"
+230,H05T7A,Software Defined Radio and Networking,Eerste semester,['S.Pollin']
+231,H05F9A,Masterproef,Beide semesters,['V.Rijmen']
+232,H03F6A,IndustriÃ«le stage: Elektrotechniek / Industrial Internship: Electrical Engineering,Eerste semester,"['T.Tuytelaars', 'S.Pollin', 'P.Reynaert', 'D.Van Hertem']"
+233,H05W9A,Bedrijfservaring: Elektrotechniek / Industrial Experience: Electrical Engineering,Eerste semester,"['T.Tuytelaars', 'S.Pollin', 'P.Reynaert', 'D.Van Hertem']"
+234,H0E92A,Design and Implementation of Analog Circuits,First term,"['P.Reynaert', 'F.Tavernier']"
+235,H05D7A,Computer-Aided IC Design,First term,"['G.Gielen', 'M.Steyaert']"
+236,H05E9A,Electromagnetic Interference in Analogue and Digital Systems,First term,['G.Vandenbosch']
+237,H05H2A,Compute Platforms for AI and Embedded Processing,First term,"['M.Verhelst', 'W.Dehaene']"
+238,H09I9A,Design of RF and mm-Wave Integrated Circuits,First term,"['P.Reynaert', 'M.Steyaert']"
+239,H06F2A,Semiconductor Physics,First term,['B.SorÃ©e']
+240,H06G4A,Materials Physics and Technology for Nanoelectronics,First term,"['C.Merckling', 'F.Molina Lopez']"
+241,H04A0A,Power Systems,First term,['J.Beerten']
+242,H04C8A,Electromobility,First term,"['J.Driesen', 'K.De GussemÃ©']"
+243,H04E8A,Veiligheid in elektrische installaties,First term,"['F.Vanwynsberghe', 'G.Deconinck']"
+244,H03E1B,System Identification and Modeling,First term,['B.De Moor']
+245,H0P08A,Optimization Problems in Energy Systems,First term,"['E.Delarue', 'K.Bruninx', 'H.Ergun']"
+246,H05S2A,Telecommunications and Security Management,First term,"['D.Schreurs', 'N.Smart']"
+247,H09L2A,Privacy Technologies,First term,['M.Diaz Martinez']
+248,H05T6A,Telecom Systems: Capita Selecta,First term,"['S.Pollin', 'I.Fernandez-Hernandez']"
+249,H05T7A,Software Defined Radio and Networking,First term,['S.Pollin']
+250,H08N0A,Introduction to Safety Engineering,First term,"['K.Bernaerts', 'G.Boogaerts', 'G.De Smet']"
+251,H03F6A,IndustriÃ«le stage: Elektrotechniek / Industrial Internship: Electrical Engineering,First term,"['T.Tuytelaars', 'S.Pollin', 'P.Reynaert', 'D.Van Hertem']"
+252,H05W9A,Bedrijfservaring: Elektrotechniek / Industrial Experience: Electrical Engineering,First term,"['T.Tuytelaars', 'S.Pollin', 'P.Reynaert', 'D.Van Hertem']"
+253,H04Y9A,Tweefasenstroming: theorie en toepassingen,Eerste semester,"['L.Helsen', 'M.Vetrano']"
+254,H05A6A,Geavanceerde meettechnieken in de stromingsmechanica,Eerste semester,"['L.Helsen', 'M.Vetrano']"
+255,H04Z8A,Aircraft Engines,Eerste semester,['P.Hendrick']
+256,H04U8A,Numerical Techniques in Fluid Dynamics,Eerste semester,"['J.Meyers', 'M.Baelmans']"
+257,H04Y7A,Turbulence,Eerste semester,['J.Meyers']
+258,D0M36A,Environmental and Transportation Economics,Eerste semester,['S.Proost']
+259,D0M36B,Environmental and Transportation Economics,Eerste semester,['S.Proost']
+260,G0Q20C,Fundamentals of Financial Mathematics,Eerste semester,['W.Schoutens']
+261,S0F06A,Global Environmental Politics,Eerste semester,"['K.Biedenkopf', 'J.Delbeke', 'L.Bomans']"
+262,H0P08A,Optimization Problems in Energy Systems,Eerste semester,"['E.Delarue', 'K.Bruninx', 'H.Ergun']"
+263,H06E2A,Quantum Physics,Eerste semester,"['P.Lievens', 'P.Ferrari Ramirez']"
+264,H04F2A,IndustriÃ«le stage: Energie / Industrial Internship: Energy,Eerste semester,['G.Deconinck']
+265,H04F3A,Masterproef,Beide semesters,['E.Delarue']
+266,H06M9A,Bedrijfservaring: Energie / Industrial Experience: Energy,Eerste semester,['G.Deconinck']
+267,P0M42A,"Organisatiepsychologie, deel 1",Eerste semester,['J.Stouten']
+268,H04U8A,Numerical Techniques in Fluid Dynamics,First term,"['J.Meyers', 'M.Baelmans']"
+269,H04Y7A,Turbulence,First term,['J.Meyers']
+270,H04Z8A,Aircraft Engines,First term,['P.Hendrick']
+271,H0A21A,Two-Phase Flow: Theory and Applications,First term,['M.Vetrano']
+272,H0E66A,Advanced Measurement Techniques in Fluid Mechanics,First term,['M.Vetrano']
+273,D0M36A,Environmental and Transportation Economics,First term,['S.Proost']
+274,D0M36B,Environmental and Transportation Economics,First term,['S.Proost']
+275,G0Q20C,Fundamentals of Financial Mathematics,First term,['W.Schoutens']
+276,S0F06A,Global Environmental Politics,First term,"['K.Biedenkopf', 'J.Delbeke', 'L.Bomans']"
+277,H06E2A,Quantum Physics,First term,"['P.Lievens', 'P.Ferrari Ramirez']"
+278,H04F2A,IndustriÃ«le stage: Energie / Industrial Internship: Energy,First term,['G.Deconinck']
+279,H06M9A,Bedrijfservaring: Energie / Industrial Experience: Energy,First term,['G.Deconinck']
+280,H02U3A,Metals: Production and Recycling,Eerste semester,"['B.Blanpain', 'F.Verhaeghe']"
+281,H0P65A,Adhesion Science and Engineering,Eerste semester,['D.Seveno']
+282,H02V8A,Design and Analysis of Experimentation,Eerste semester,['M.Diehl']
+283,H0T30A,Projectonderwijs materiaalkunde aansluitend bij de gemeenschappelijke opleidingsonderdelen: deel I,Eerste semester,"['J.Vleugels', 'B.Blanpain', 'N.Moelans', 'M.Seefeldt', 'M.Wevers']"
+284,H0S55A,Metals: Shaping and Joining,Eerste semester,"['K.Vanmeensel', 'H.Mohrbacher']"
+285,H0S57A,Composites Manufacturing,Eerste semester,['J.Ivens']
+286,H06F6A,"Structure, Synthesis and Cellular Function of Macromolecules",Eerste semester,"['P.Proost', 'H.Steenackers', 'L.Temmerman', 'J.Vanden Broeck']"
+287,H02V3A,Computational Thermodynamics in Materials Design,Eerste semester,['N.Moelans']
+288,H02W8A,Materials Characterisation Techniques II,Eerste semester,"['J.Seo', 'I.De Wolf']"
+289,H02X1A,Materiaalmodellering voor simulaties van vormgevingstechnieken,Eerste semester,['A.Van Bael']
+290,H0S61A,Wetenschappelijk schrijven,Beide semesters,['Y.Pontikes']
+291,H02W6A,IndustriÃ«le stage: Materiaalkunde / Industrial Internship: Materials Engineering,Eerste semester,"['Y.Pontikes', 'B.Blanpain', 'I.De Wolf', 'M.Wevers', 'D.Seveno']"
+292,H0S64A,Bedrijfservaring: Materiaalkunde / Industrial Experience: Materials Engineering,Eerste semester,[]
+293,I0T97A,Functional Anatomy of the Human Locomotor System,Eerste semester,"['H.Vandenneucker', 'M.Mulier']"
+294,G0H96A,Chemistry and Characterisation of Surfaces and Thin Films,Eerste semester,"['S.De Gendt', 'A.Delabie']"
+295,H06T1A,Applied Physical Chemistry,Eerste semester,"['S.Kuhn', 'J.Martens']"
+296,H0S63A,Recent Developments in Composites Research and Technology,Eerste semester,"['D.Seveno', 'L.Gorbatikh', 'C.Breite', 'S.Lomov', 'A.Van Vuure']"
+297,D0T31A,Industrial Organisation: Theory and Applications,Eerste semester,['J.Seldeslachts']
+298,D0S34A,Operations strategie,Eerste semester,['M.Udenio Castro']
+299,H02Y9A,Masterproef,Beide semesters,['M.Seefeldt']
+300,H02U3A,Metals: Production and Recycling,First term,"['B.Blanpain', 'F.Verhaeghe']"
+301,H0P65A,Adhesion Science and Engineering,First term,['D.Seveno']
+302,H0S53B,Quality Control and Advanced Non-Destructive Testing,First term,"['M.Wevers', 'I.De Wolf', 'G.Kerckhofs']"
+303,H02V8A,Design and Analysis of Experimentation,First term,['M.Diehl']
+304,H00B3B,Project Work and Problem Solving linked to the Core Courses: Part I,First term,"['J.Vleugels', 'B.Blanpain', 'M.Seefeldt', 'D.Seveno', 'M.Wevers']"
+305,H0S55A,Metals: Shaping and Joining,First term,"['K.Vanmeensel', 'H.Mohrbacher']"
+306,H0S57A,Composites Manufacturing,First term,['J.Ivens']
+307,H06F6A,"Structure, Synthesis and Cellular Function of Macromolecules",First term,"['P.Proost', 'H.Steenackers', 'L.Temmerman', 'J.Vanden Broeck']"
+308,H02V3A,Computational Thermodynamics in Materials Design,First term,['N.Moelans']
+309,H02W8A,Materials Characterisation Techniques II,First term,"['J.Seo', 'I.De Wolf']"
+310,H00B4A,Materials Modelling for Forming Process Simulations,First term,['A.Van Bael']
+311,H02W6A,IndustriÃ«le stage: Materiaalkunde / Industrial Internship: Materials Engineering,First term,"['Y.Pontikes', 'B.Blanpain', 'I.De Wolf', 'M.Wevers', 'D.Seveno']"
+312,H0S64A,Bedrijfservaring: Materiaalkunde / Industrial Experience: Materials Engineering,First term,[]
+313,H00B7B,Physical and Chemical Foundations of Materials Engineering,First term,['M.Seefeldt']
+314,H08Z1B,Continuum Modelling of the Mechanical Response of Materials,First term,"['M.Seefeldt', 'M.Wevers']"
+315,H9X55A,Physics and Mechanical Behaviour of Polymers,First term,['B.Goderis']
+316,I0T97A,Functional Anatomy of the Human Locomotor System,First term,"['H.Vandenneucker', 'M.Mulier']"
+317,G0H96A,Chemistry and Characterisation of Surfaces and Thin Films,First term,"['S.De Gendt', 'A.Delabie']"
+318,H0S63A,Recent Developments in Composites Research and Technology,First term,"['D.Seveno', 'L.Gorbatikh', 'C.Breite', 'S.Lomov', 'A.Van Vuure']"
+319,D0T31A,Industrial Organisation: Theory and Applications,First term,['J.Seldeslachts']
+320,D0T33A,Organizational Behaviour,First term,['N.Dries']
+321,H06L9A,Planning en evaluatie van transportinfrastructuur,Eerste semester,['M.De Ceuster']
+322,H01I6B,Verkeerskunde,Eerste semester,['C.TampÃ¨re']
+323,H08I6A,"GeÃ¯ntegreerd practicum 1: Organisatie van logistiek, transport en vervoer",Beide semesters,"['D.Cattrysse', 'P.Vansteenwegen']"
+324,H0A25A,Vrachtvervoer management,Eerste semester,['A.Van Breedam']
+325,H0A26A,Intelligente transportsystemen,Eerste semester,['C.TampÃ¨re']
+326,H08I7A,GeÃ¯ntegreerd practicum 2: Dynamisch verkeersmanagement,Beide semesters,['C.TampÃ¨re']
+327,H05A1A,Voertuigconstructies en voertuigdynamica,Eerste semester,"['F.Naets', 'W.Desmet']"
+328,H06O9A,"IndustriÃ«le stage: Verkeer, logistiek en intelligente transportsystemen / Industrial Internship: Logistics and Traffic",Eerste semester,"['L.Pintelon', 'D.Cattrysse', 'C.TampÃ¨re', 'P.Vansteenwegen']"
+329,H08J2A,"Bedrijfservaring: Verkeer, logistiek en intelligente transportsystemen / Industrial Experience: Logistics and Traffic",Eerste semester,"['L.Pintelon', 'D.Cattrysse', 'C.TampÃ¨re', 'P.Vansteenwegen']"
+330,H08J9A,Masterproef,Beide semesters,['P.Vansteenwegen']
+331,H05K3A,Freight Transport Management,First term,['A.Van Breedam']
+332,H00M8B,Intelligent Transportation Systems,First term,['C.TampÃ¨re']
+333,T42ASA,Applied Sustainability Assessment,First term,"['W.Dewulf', 'J.Van Caneghem', 'M.Abdelbaky']"
+334,H02A0D,Fundamentals of Artificial Intelligence,First term,['T.Guns']
+335,D0M60B,Combinatorial Optimization and Local Search Techniques,First term,['E.Demeulemeester']
+336,H05A1A,Voertuigconstructies en voertuigdynamica,First term,"['F.Naets', 'W.Desmet']"
+337,T42AUV,Autonomous Vehicles,First term,"['P.Slaets', 'E.Vander Poorten', 'O.Al-Ahmad', 'J.De Smet']"
+338,H02L4A,Theory and Practice of Urbanism since 1945,First term,['B.De Meulder']
+339,H03N1A,Landscape Architecture,First term,['S.Shannon']
+340,H06O9A,"IndustriÃ«le stage: Verkeer, logistiek en intelligente transportsystemen / Industrial Internship: Logistics and Traffic",First term,"['L.Pintelon', 'D.Cattrysse', 'C.TampÃ¨re', 'P.Vansteenwegen']"
+341,H08J2A,"Bedrijfservaring: Verkeer, logistiek en intelligente transportsystemen / Industrial Experience: Logistics and Traffic",First term,"['L.Pintelon', 'D.Cattrysse', 'C.TampÃ¨re', 'P.Vansteenwegen']"
+342,D0R18A,Project Management and Scheduling,First term,['E.Demeulemeester']
+343,D0S92A,Operations Strategy in Manufacturing and Services,First term,['M.Udenio Castro']
+344,D0S99A,Applied Optimization,First term,"['R.Leus', 'M.Davari', 'H.Yaman Paternotte']"
+345,H04Q2A,Geavanceerde materiaalafnameprocessen,Eerste semester,['S.Castagne']
+346,H06U9B,Advanced Robot Control Systems,Eerste semester,['H.Bruyninckx']
+347,H04Q7A,Advanced Model Based Control,Eerste semester,['J.Swevers']
+348,H04X5A,Spacecraft Technology and Space Environment,Eerste semester,['J.Steelant']
+349,H04R7A,"Luchtvaarttechnologie en -omgeving, deel 2",Beide semesters,['D.Vandepitte']
+350,H05A5A,Voertuigsystemen,Eerste semester,['F.Naets']
+351,H04X0A,"Structural Dynamics, Analysis and Numerical Modelling",Eerste semester,"['K.Gryllias', 'E.Heylen']"
+352,H04Q4A,Advanced Techniques for Vibro-acoustic Measurement and Analysis,Eerste semester,"['K.Gryllias', 'H.Van Der Auweraer']"
+353,H0A13A,Dredging Technology for Mechanical Engineers,Eerste semester,"['G.Vanneste', 'J.Fordeyn']"
+354,H06X2A,Advanced Study Topics in Musculoskeletal Biomechanics,Eerste semester,"['G.van Lenthe', 'N.Famaey', 'I.Jonkers']"
+355,H04Q9A,IndustriÃ«le stage: Werktuigkunde / Industrial Internship: Mechanical Engineering,Eerste semester,['H.Bruyninckx']
+356,H04S3A,Masterproef,Beide semesters,['S.Castagne']
+357,H08N0A,Introduction to Safety Engineering,Eerste semester,"['K.Bernaerts', 'G.Boogaerts', 'G.De Smet']"
+358,H04O7A,Bedrijfservaring: Werktuigkunde / Industrial Experience: Mechanical Engineering,Eerste semester,['H.Bruyninckx']
+359,H0E73A,Stage studiebegeleiding: Werktuigkunde,Beide semesters,"['D.Vandepitte', 'M.Baelmans', 'W.Desmet', 'J.Vander Sloten']"
+360,H04V6A,Introduction to Operational Management and Logistics,First term,['D.Cattrysse']
+361,H0E62A,Advanced Subtractive Manufacturing,First term,['S.Castagne']
+362,H04Q7A,Advanced Model Based Control,First term,['J.Swevers']
+363,H06U9B,Advanced Robot Control Systems,First term,['H.Bruyninckx']
+364,H02D2A,Uncertainty in Artificial Intelligence,First term,"['L.De Raedt', 'T.De Laet']"
+365,H04X5A,Spacecraft Technology and Space Environment,First term,['J.Steelant']
+366,H04X0A,"Structural Dynamics, Analysis and Numerical Modelling",First term,"['K.Gryllias', 'E.Heylen']"
+367,H04Q4A,Advanced Techniques for Vibro-acoustic Measurement and Analysis,First term,"['K.Gryllias', 'H.Van Der Auweraer']"
+368,H0T54A,Automotive Structures and Vehicle Dynamics,First term,"['F.Naets', 'W.Desmet']"
+369,H0A13A,Dredging Technology for Mechanical Engineers,First term,"['G.Vanneste', 'J.Fordeyn']"
+370,H04Q9A,IndustriÃ«le stage: Werktuigkunde / Industrial Internship: Mechanical Engineering,First term,['H.Bruyninckx']
+371,D0R36A,"Global, B2B and Service Marketing",First term,['A.Edeling']
+372,H04O7A,Bedrijfservaring: Werktuigkunde / Industrial Experience: Mechanical Engineering,First term,['H.Bruyninckx']
+373,H0S14A,Systeemidentificatie en modellering,Eerste semester,['B.De Moor']
+374,H05M9A,Bio-informatica,Eerste semester,['Y.Moreau']
+375,H03G1A,Numerical Linear Algebra,Eerste semester,"['M.Van Barel', 'K.Meerbergen', 'R.Vandebril']"
+376,G0B30A,Computational Methods for Astrophysical Applications,Eerste semester,"['R.Keppens', 'J.Sundqvist']"
+377,H08K8A,Capita Selecta Mathematical Engineering,Beide semesters,['K.Meerbergen']
+378,H03G7A,IndustriÃ«le stage: Wiskundige ingenieurstechnieken / Industrial Internship: Mathematical Engineering,Eerste semester,"['K.Meerbergen', 'B.De Moor']"
+379,H03H9A,Masterproef,Beide semesters,['R.Vandebril']
+380,H02X6A,Bedrijfservaring: Wiskundige ingenieurstechnieken / Industrial Experience: Mathematical Engineering,Eerste semester,"['K.Meerbergen', 'B.De Moor']"
+381,H03G1A,Numerical Linear Algebra,First term,"['M.Van Barel', 'K.Meerbergen', 'R.Vandebril']"
+382,G0B30A,Computational Methods for Astrophysical Applications,First term,"['R.Keppens', 'J.Sundqvist']"
+383,G0Q20A,Fundamentals of Financial Mathematics,First term,['W.Schoutens']
+384,G0A17A,Fundamental Concepts of Statistics,First term,['C.Cerovecki']
+385,G0A21A,Statistical Software,First term,['A.Carbonez']
+386,H03G7A,IndustriÃ«le stage: Wiskundige ingenieurstechnieken / Industrial Internship: Mathematical Engineering,First term,"['K.Meerbergen', 'B.De Moor']"
+387,H02X6A,Bedrijfservaring: Wiskundige ingenieurstechnieken / Industrial Experience: Mathematical Engineering,First term,"['K.Meerbergen', 'B.De Moor']"
+388,H02V6A,Halfgeleiderfysica,Eerste semester,['B.SorÃ©e']
+389,H09M2A,"Atom Theory, Chemical Periodicity and Chemical Bond",Eerste semester,['M.Seefeldt']
+390,H0N91A,Quantum Physics II,Eerste semester,['R.de Groote']
+391,H05K6A,Materiaalfysica en technologie voor nano-elektronica,Eerste semester,['C.Merckling']
+392,H05L2A,Nanogestructureerde bio-macromoleculen,Eerste semester,"['H.Mizuno', 'E.Nies', 'S.Neves Rocha']"
+393,H05L4B,Geavanceerde nano-elektronica componenten,Eerste semester,['L.Lagae']
+394,G0G99B,Nanostructure Determination via Electromagnetic Radiation,Eerste semester,['B.Goderis']
+395,G9X47A,Physical Chemistry of Polymers,Eerste semester,['E.Nies']
+396,H09I0B,Ontwerp van digitale platformen,Eerste semester,"['I.Verbauwhede', 'W.Dehaene']"
+397,H0G03A,Electronic Transport in Solids and Nanostructures,Eerste semester,['M.Houssa']
+398,H0G02A,Optical Properties of Solids,Eerste semester,['P.Van Dorpe']
+399,G0G71A,Physical Chemistry of Biological Systems,Eerste semester,['H.Mizuno']
+400,I0P05C,Biofluidics,Eerste semester,['B.Nicolai']
+401,H0N87A,Quantum Optics,Eerste semester,['K.De Greve']
+402,H0N89A,Materials and Technology for Quantum Systems,Eerste semester,"['C.Merckling', 'J.Van de Vondel']"
+403,H06D5A,Photophysics and Photochemistry of Molecular Materials,Eerste semester,['M.Van der Auweraer']
+404,G0J65B,Electrochemical Methods in Inorganic Chemistry,Eerste semester,['E.Matthijs']
+405,H08Z2A,Structures and Microstructures of Materials,Eerste semester,['M.Seefeldt']
+406,G9X25A,Molecular Photonics,Eerste semester,"['K.Clays', 'Y.de Coene']"
+407,H06A5A,Bioresponse Measurements and Process Control,Eerste semester,"['T.Norton', 'J.Aerts']"
+408,G0G86A,Biophysics of Membranes,Eerste semester,['K.Talavera PÃ©rez']
+409,H03U3A,IndustriÃ«le stage: nanowetenschappen en nanotechnologie / Industrial Internship: Nanoscience and Nanotechnology,Eerste semester,['D.Schreurs']
+410,H09Z4A,Masterproef,Beide semesters,['I.De Wolf']
+411,H00T3A,Bedrijfservaring: nanowetenschappen en nanotechnologie / Industrial Experience: Nanoscience and Nanotechnology,Eerste semester,['D.Schreurs']
+412,H08T5A,"Electronic Components, Circuits and Sensors",First term,['P.Reynaert']
+413,H09M2A,"Atom Theory, Chemical Periodicity and Chemical Bond",First term,['M.Seefeldt']
+414,H0N91A,Quantum Physics II,First term,['R.de Groote']
+415,H06D3A,Nanostructured Bio-Macromolecules,First term,"['H.Mizuno', 'E.Nies', 'S.Neves Rocha']"
+416,H06A1B,Advanced Nanodevices,First term,"['L.Lagae', 'B.SorÃ©e']"
+417,G0G99B,Nanostructure Determination via Electromagnetic Radiation,First term,['B.Goderis']
+418,G9X47A,Physical Chemistry of Polymers,First term,['E.Nies']
+419,H09J6B,Design of Digital Platforms,First term,"['I.Verbauwhede', 'W.Dehaene']"
+420,H0G03A,Electronic Transport in Solids and Nanostructures,First term,['M.Houssa']
+421,H0G02A,Optical Properties of Solids,First term,['P.Van Dorpe']
+422,G0G71A,Physical Chemistry of Biological Systems,First term,['H.Mizuno']
+423,I0P05C,Biofluidics,First term,['B.Nicolai']
+424,H0N87A,Quantum Optics,First term,['K.De Greve']
+425,H0N89A,Materials and Technology for Quantum Systems,First term,"['C.Merckling', 'J.Van de Vondel']"
+426,H06D5A,Photophysics and Photochemistry of Molecular Materials,First term,['M.Van der Auweraer']
+427,G0J65B,Electrochemical Methods in Inorganic Chemistry,First term,['E.Matthijs']
+428,H08Z2A,Structures and Microstructures of Materials,First term,['M.Seefeldt']
+429,G9X25A,Molecular Photonics,First term,"['K.Clays', 'Y.de Coene']"
+430,H06A5A,Bioresponse Measurements and Process Control,First term,"['T.Norton', 'J.Aerts']"
+431,G0G86A,Biophysics of Membranes,First term,['K.Talavera PÃ©rez']
+432,H03U3A,IndustriÃ«le stage: nanowetenschappen en nanotechnologie / Industrial Internship: Nanoscience and Nanotechnology,First term,['D.Schreurs']
+433,C00M1A,Bouwrecht,First term,['K.Deketelaere']
+434,E02N9A,Ethiek en recht in het biomedisch onderzoek,First term,"['K.Dierickx', 'S.Lierman']"
+435,D0S34A,Operations strategie,First term,['M.Udenio Castro']
+436,H00T3A,Bedrijfservaring: nanowetenschappen en nanotechnologie / Industrial Experience: Nanoscience and Nanotechnology,First term,['D.Schreurs']

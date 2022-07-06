@@ -1,0 +1,28 @@
+,code,naam,sem,prof
+0,H01U3C,Computationeel ontwerpen,Eerste semester,['A.Vande Moere']
+1,H06V4A,Scheikunde,Eerste semester,"['B.Goderis', 'N.Knoops']"
+2,H0P86A,Building Acoustics,Eerste semester,['E.Reynders']
+3,H0S33A,"Constructie van gebouwen, deel 1: hoorcollege",Eerste semester,['K.Allacker']
+4,H01Y3A,"Constructie van gebouwen, deel 3",Eerste semester,"['G.Roels', 'G.Van Den Bogaert']"
+5,H01W6B,Architecturale en stedelijke simulatie,Beide semesters,['A.Vande Moere']
+6,H01S4B,"Architectuurtheorie, deel 1",Eerste semester,['H.Heynen']
+7,H01W2B,Theory and History of Urban Design,Eerste semester,"[""V.d'Auria""]"
+8,H01T7D,Architectuurontwerp 1A,Eerste semester,"['B.Oelbrandt', 'S.Flebus', 'E.Van Meerbeek', 'K.Vandenhende']"
+9,H01T8A,"Ontwerpmedia en vormleer, deel 1",Beide semesters,"['E.Van Meerbeek', 'B.Oelbrandt', 'K.Vandenhende']"
+10,H01V5D,Architectuurontwerp 2A,Eerste semester,"['G.Lams', 'G.De Neuter', 'D.Driesen', 'M.Schevenels', 'K.Vandenhende']"
+11,H01W0A,Architectuurontwerp 2C: bouwtechnische aspecten,Beide semesters,"['G.Lams', 'G.De Neuter', 'D.Driesen', 'M.Schevenels']"
+12,H0S24A,"Ontwerpmedia en vormleer, deel 2",Beide semesters,"['G.Lams', 'G.De Neuter', 'D.Driesen', 'K.Vandenhende']"
+13,H01W8B,Architectuurontwerp 3A,Eerste semester,"['G.Desmet', 'K.Allacker', 'K.Vandenhende', 'I.Vanhamme']"
+14,H0H95A,"Ontwerpmedia en vormleer, deel 3",Beide semesters,"['G.Desmet', 'K.Vandenhende', 'I.Vanhamme']"
+15,H01D8B,Numerieke wiskunde,Eerste semester,"['K.Meerbergen', 'D.Nuyens']"
+16,H01C4B,Wijsbegeerte,Eerste semester,"['S.Rummens', 'F.Dewulf']"
+17,H0H49A,Hydraulica,Eerste semester,['E.Toorman']
+18,H0H55A,P&O Bouwkunde,Beide semesters,"['H.Janssen', 'S.FranÃ§ois', 'E.Verstrynge', 'O.Cizer']"
+19,H01R4C,P&O: chemische technologie,Beide semesters,"['K.Bernaerts', 'C.Clasen', 'J.DegrÃ¨ve', 'P.Moldenaers', 'I.Smets', 'T.Van Gerven', 'P.Van Puyvelde', 'B.Van der Bruggen']"
+20,H06U1A,ArtificiÃ«le intelligentie,Eerste semester,['L.De Raedt']
+21,H0N65A,Inleiding tot gegevensbanken,Eerste semester,['A.Kimmig']
+22,H01Q3C,P&O: computerwetenschappen,Beide semesters,"['D.Nuyens', 'H.Blockeel', 'A.Simeone', 'B.Jacobs']"
+23,H01Q6C,P&O: elektrotechniek,Beide semesters,"['M.Verhelst', 'A.Bertrand', 'S.Pollin', 'V.Rijmen', 'T.Tuytelaars', 'R.Vazquez Sabariego', 'P.Patrinos', 'P.Wambacq', 'I.Taurino', 'R.Detry']"
+24,H0T33A,P&O: materiaalkunde: bachelorproef,Beide semesters,"['M.Wevers', 'J.Fransaer', 'J.Vleugels']"
+25,H01P7C,P&O: werktuigkunde,Beide semesters,"['D.Reynaerts', 'W.Desmet', 'K.Thaels', 'B.Van Hooreweder', 'D.Vandepitte', 'B.Vrancken']"
+26,H09O0B,Ontwerpen in de medische technologie,Beide semesters,"['J.Vander Sloten', 'A.Bertrand', 'S.De Buck', 'M.De Vos', 'W.Dehaene', 'N.Famaey', 'F.Maes', 'H.Van Oosterwyck', 'D.Vandermeulen', 'G.van Lenthe', 'M.Blaschko']"
