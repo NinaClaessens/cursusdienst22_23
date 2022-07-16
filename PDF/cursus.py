@@ -83,7 +83,7 @@ class Cursus:
         if self.is_same:
             return '{"key": "99783417c1b06c8b39ae8025f5bfc937", ' \
                    '"is_same": "' + str(self.is_same).lower() + '", ' \
-                   '"barcode": "' + str(self.barcode) + '"}'
+                   '"barcode": "978' + Cursus.get_years_back(1) + cur_year + str(self.barcode) + '"}'
         else:
             return '{"key": "99783417c1b06c8b39ae8025f5bfc937", ' \
                  '"is_same": "' + str(self.is_same).lower() + '", ' \
