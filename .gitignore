@@ -1,6 +1,8 @@
 # Custom ignores
 Archief/
-client_secrets.json
+PDF/client_secrets.json
+PDF/settings.yaml
+PDF/credentials.json
 .idea/
 
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
