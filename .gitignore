@@ -2,6 +2,8 @@
 
 # To large data
 Archief/
+**/**.xlsx
+**/**.csv
 
 # Credentials
 PDF/client_secrets.json
