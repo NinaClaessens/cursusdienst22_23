@@ -35,7 +35,6 @@ for i, row in enumerate(ws.iter_rows(min_row=2)):
                 c = cursus.Cursus(True, barcode, color, rv)
                 c.update()
                 row[index_site].value = "ok"
-wb.save('balances.xlsx')
+wb.save('cursussen_adapted.xlsx')
 file.SetContentFile('cursussen_adapted.xlsx')
 file.Upload()  # Upload the file.
-
