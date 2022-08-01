@@ -3,6 +3,7 @@ from datetime import datetime
 import os
 from PyPDF2 import PdfFileReader, PdfFileWriter
 import requests
+import io
 
 cur_year = str(datetime.now().year)[-2:]
 semester = "eerste_semester"
@@ -44,7 +45,7 @@ class Cursus:
 
     def previous_pdf(self, years_back=1):
         if self.pdf is None:
-            years = Cursus.get_years_back(1) + cur_year
+            years = Cursus.get_years_back(years_back) + Cursus.get_years_back(years_back - 1)
             folder = "../Archief/" + years + "/"
             if os.path.isdir(folder):
                 file = folder + semester + "/" + str(self.barcode) + ".pdf"
@@ -65,35 +66,56 @@ class Cursus:
 
     def sell(self):
         if self.rv:
-            return str(round(math.ceil((math.ceil(self.pages_bw()/2) * buy_rv + math.ceil(self.pages_col/2) * buy_rv_col + 0.5) * 1.02 * 1.06 * 10)/10, 2))
+            return str(round(math.ceil((math.ceil(self.pages_bw()/2) * sell_rv + math.ceil(self.pages_col/2) * sell_rv_col + 0.5) * 1.02 * 1.06 * 10)/10, 2))
         else:
-            return str(round(math.ceil((self.pages_bw() * buy_r + self.pages_col * buy_r_col + 0.5) * 1.02 * 1.06 * 10)/10, 2))
+            return str(round(math.ceil((self.pages_bw() * sell_r + self.pages_col * sell_r_col + 0.5) * 1.02 * 1.06 * 10)/10, 2))
 
     def update(self):
         if self.is_same:
-            print(self.get_json())
-            r = requests.post(' http://www.vtk.be/api/cudi/is-same', json=self.get_json())
-            print(r.status_code)
-            print(r.json())
+            r = requests.post('https://www.vtk.be/api/cudi/is-same', data=self.get_json())
+            front_page = r.json()['front_page']
+            url = 'https://www.vtk.be' + front_page
+            print(url)
+            response = requests.get(url)
+            output = PdfFileWriter()
+            p = io.BytesIO(response.content)
+            front = PdfFileReader(p)
 
+            if front.getNumPages() == 1:
+                output.addPage(front.getPage(0))
+
+            course = self.previous_pdf()
+            for i in range(course.getNumPages()):
+                if i != 0:
+                    output.addPage(course.getPage(i))
+
+            file = "../Archief/" + cur_year + self.get_years_back(-1) + "/" + semester + "/" + str(self.barcode) + ".pdf"
+            with open(file, 'wb') as f:
+                output.write(f)
         else:
             raise 'Not yet implemented'
 
     def get_json(self):
         if self.is_same:
-            return '{"key": "99783417c1b06c8b39ae8025f5bfc937", ' \
-                   '"is_same": "' + str(self.is_same).lower() + '", ' \
-                   '"barcode": "978' + Cursus.get_years_back(1) + cur_year + str(self.barcode) + '"}'
+            return {
+                        "key": "99783417c1b06c8b39ae8025f5bfc937",
+                        "is_same": str(self.is_same),
+                        "barcode": "978" + Cursus.get_years_back(1) + cur_year + str(self.barcode),
+                        "purchase_price": str(self.buy()),
+                        "sell_price": str(self.sell())
+                     }
         else:
-            return '{"key": "99783417c1b06c8b39ae8025f5bfc937", ' \
-                 '"is_same": "' + str(self.is_same).lower() + '", ' \
-                 '"barcode": "' + str(self.barcode) + '", ' \
-                 '"black_white": "' + str(self.pages_bw()) + '", ' \
-                 '"colored": "' + str(self.pages_col) + '", ' \
-                 '"official": "true", ' \
-                 '"recto_verso": "' + str(self.rv).lower() + '", ' \
-                 '"buy_price": "' + self.buy() + '", ' \
-                 '"sell_price": "' + self.sell() + '" }'
+            return{
+                        "key": "99783417c1b06c8b39ae8025f5bfc937",
+                        "is_same": str(self.is_same),
+                        "barcode": "978" + Cursus.get_years_back(1) + cur_year + str(self.barcode),
+                        "purchase_price": str(self.buy()),
+                        "sell_price": str(self.sell()),
+                        "black_white": str(self.pages_bw()),
+                        "colored": str(self.pages_col),
+                        "official": "True",
+                        "recto_verso": str(self.rv)
+                     }
 
     def __del__(self):
         if self.f is not None:
