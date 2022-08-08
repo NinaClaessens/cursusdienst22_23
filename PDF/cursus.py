@@ -5,6 +5,8 @@ from PyPDF2 import PdfFileReader, PdfFileWriter
 import requests
 import io
 
+print('2' < '10')
+
 cur_year = str(datetime.now().year)[-2:]
 semester = "eerste_semester"
 
@@ -19,6 +21,11 @@ buy_rv_col = 0.17161
 sell_r_col = sell_r/buy_r * buy_r_col
 sell_rv_col = sell_r/buy_r * buy_rv_col
 
+PDF_WIDTH, PDF_HEIGHT = 595.275, 841.889
+
+def custom_sort(x, y):
+    for i, char in enumerate():
+        pass
 
 class Cursus:
     @staticmethod
@@ -93,7 +100,29 @@ class Cursus:
             with open(file, 'wb') as f:
                 output.write(f)
         else:
-            raise 'Not yet implemented'
+            path = 'Veranderd/' + str(self.barcode) + '/'
+            NO_PROBLEMS = True
+            if os.path.isdir(path):
+                output = PdfFileWriter()
+                if self.rv:
+                    output.addBlankPage(PDF_WIDTH, PDF_HEIGHT)
+
+                for file in sorted(os.listdir(path), key=lambda f: f.replace(' ', '_')):
+                    if NO_PROBLEMS:
+                        full_path_file = path + file
+                        print(full_path_file)
+                        if file[-4:] == ".pdf":
+                            pass
+                        else:
+                            # One of the files is not a PDF
+                            print(f'{full_path_file} is not a PDF.')
+                            NO_PROBLEMS = False
+
+                if NO_PROBLEMS:
+                    #  get front page
+                    pass
+            else:
+                print(f'{self.barcode} does not yet have its new files.')
 
     def get_json(self):
         if self.is_same:
