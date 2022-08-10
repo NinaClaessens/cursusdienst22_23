@@ -31,11 +31,11 @@ for folder in subfolders:
                     deeltje.GetContentFile('Veranderd/' + cursus_barcode + '/' + deeltje['title'])
         else:
             print(f'Folder in Cursussen folder op Google Drive met onherkende naam: {cursus_barcode}.')
-
     else:
         print(f'Weird file found in Cursussen folder on Google Drive: {folder["title"]}')
 
 index_barcode = 1
+index_slides_per_p = 8
 index_color = 10
 index_rv = 11
 index_site = 3
@@ -43,16 +43,20 @@ index_site = 3
 first = True
 for i, row in enumerate(ws.iter_rows(min_row=2)):
     if row[0].value is not None and row[1].value is not None and (type(row[1].value) is float or type(row[1].value) is int) and row[2].value is not None and row[index_site].value != "ok":
-        if row[2].value.lower().strip() == 'zelfde' or row[2].value.lower().strip() == 'veranderd':
-            barcode = int(row[index_barcode].value)
+        barcode = int(row[index_barcode].value)
+        if row[2].value.lower().strip() == 'zelfde' or (row[2].value.lower().strip() == 'veranderd' and os.path.isdir('Veranderd/' + str(barcode))):
             color = int(row[index_color].value)
             rv = int(row[index_rv].value) == 1
-            print(row[2].value.lower().strip() , barcode, color, rv)
-            c = cursus.Cursus(row[2].value.lower().strip() == 'zelfde', barcode, color, rv)
-            c.update()
-            row[index_site].value = "ok"
+            pp = False if row[index_slides_per_p].value is not None and int(row[index_slides_per_p].value) > 2 else True
+            if pp:
+                print(row[2].value.lower().strip(), barcode, color, rv)
+                c = cursus.Cursus(row[2].value.lower().strip() == 'zelfde', barcode, color, rv)
+                c.update()
+                row[index_site].value = "ok"
+            else:
+                print(f'Custom: {barcode}.')
         else:
             print(f'Weird value at barcode {int(row[1].value)}: {row[2].value}. Should be "veranderd" or "zelfde", nothing else.')
 wb.save('cursussen_adapted.xlsx')
 file.SetContentFile('cursussen_adapted.xlsx')
-# file.Upload()  # Upload the file.
+file.Upload()  # Upload the file.

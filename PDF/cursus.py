@@ -4,8 +4,8 @@ import os
 from PyPDF2 import PdfFileReader, PdfFileWriter
 import requests
 import io
-
-print('2' < '10')
+import functools
+import decimal
 
 cur_year = str(datetime.now().year)[-2:]
 semester = "eerste_semester"
@@ -22,10 +22,48 @@ sell_r_col = sell_r/buy_r * buy_r_col
 sell_rv_col = sell_r/buy_r * buy_rv_col
 
 PDF_WIDTH, PDF_HEIGHT = 595.275, 841.889
+PDF_REF_WIDTH, PDF_REF_HEIGHT = 210, 297
+PDF_REF_MARGIN = 5
+PDF_MARGIN_WIDTH = PDF_REF_MARGIN / PDF_REF_WIDTH * PDF_WIDTH
+PDF_MARGIN_HEIGHT = PDF_REF_MARGIN / PDF_REF_HEIGHT * PDF_HEIGHT
+
+
+def get_size(page):
+    return page.mediaBox.getWidth(), page.mediaBox.getHeight()
+
 
 def custom_sort(x, y):
-    for i, char in enumerate():
-        pass
+    # return False if x is smaller
+    a, b = str(x), str(y)
+    minus = 1
+    if len(b) < len(a):
+        a, b = b, a
+        minus = -1
+
+    for i in range(len(x)):
+        if a[i].isnumeric() and b[i].isnumeric():
+            # check which number is smaller
+            a_num = a[i]
+            b_num = b[i]
+
+            j = 1
+            while i + j < len(a) and a[i + j].isnumeric():
+                a_num += a[i + j]
+                j += 1
+
+            j = 1
+            while i + j < len(b) and b[i + j].isnumeric():
+                b_num += b[i + j]
+                j += 1
+
+            a_num, b_num = int(str(a_num)), int(str(b_num))
+            if a_num != b_num:
+                return (a_num - b_num) * minus
+
+        elif a[i] != b[i]:
+            return minus * 1 if a[i] > b[i] else -1 * minus
+    return 0 if len(a) == len(b) else minus * -1
+
 
 class Cursus:
     @staticmethod
@@ -99,30 +137,94 @@ class Cursus:
             file = "../Archief/" + cur_year + self.get_years_back(-1) + "/" + semester + "/" + str(self.barcode) + ".pdf"
             with open(file, 'wb') as f:
                 output.write(f)
+            print(f'{self.barcode} finished.')
         else:
             path = 'Veranderd/' + str(self.barcode) + '/'
             NO_PROBLEMS = True
-            if os.path.isdir(path):
-                output = PdfFileWriter()
-                if self.rv:
-                    output.addBlankPage(PDF_WIDTH, PDF_HEIGHT)
+            try:
+                if os.path.isdir(path):
+                    output = PdfFileWriter()
+                    if self.rv:
+                        output.addBlankPage(PDF_WIDTH, PDF_HEIGHT)
 
-                for file in sorted(os.listdir(path), key=lambda f: f.replace(' ', '_')):
-                    if NO_PROBLEMS:
-                        full_path_file = path + file
-                        print(full_path_file)
-                        if file[-4:] == ".pdf":
-                            pass
-                        else:
-                            # One of the files is not a PDF
-                            print(f'{full_path_file} is not a PDF.')
-                            NO_PROBLEMS = False
+                    list_dir = sorted(os.listdir(path), key=functools.cmp_to_key(custom_sort))
+                    for file in list_dir:
+                        if NO_PROBLEMS:
+                            full_path_file = path + file
+                            print(full_path_file)
+                            if file[-4:] == ".pdf":
+                                slides = PdfFileReader(full_path_file, strict=False)
+                                if slides.getNumPages() > 0:
+                                    width_slides, height_slides = get_size(slides.getPage(0))
 
-                if NO_PROBLEMS:
-                    #  get front page
-                    pass
-            else:
-                print(f'{self.barcode} does not yet have its new files.')
+                                    if width_slides >= height_slides:  # slides, 2 per page
+                                        ratio_width = decimal.Decimal(PDF_WIDTH - PDF_MARGIN_WIDTH * 2) / width_slides
+                                        ratio_height = decimal.Decimal(PDF_HEIGHT - PDF_MARGIN_HEIGHT * 3) / (2 * height_slides)
+                                        ratio = min(ratio_height, ratio_width)
+
+                                        width_diff = (decimal.Decimal(PDF_WIDTH - PDF_MARGIN_WIDTH * 2) - width_slides * ratio) / 2
+                                        height_diff = (decimal.Decimal(PDF_HEIGHT - PDF_MARGIN_HEIGHT * 3) - height_slides * ratio * 2) / 4
+
+                                        for i in range(0, slides.getNumPages(), 2):
+                                            new_page = output.addBlankPage(PDF_WIDTH, PDF_HEIGHT)
+
+                                            new_page.mergeScaledTranslatedPage(slides.getPage(i), float(ratio),
+                                                                               float(decimal.Decimal(PDF_MARGIN_WIDTH) + width_diff),
+                                                                               float(ratio * height_slides + decimal.Decimal(PDF_MARGIN_HEIGHT * 2) + height_diff * 3))
+                                            if i + 1 < slides.getNumPages():
+                                                new_page.mergeScaledTranslatedPage(
+                                                    slides.getPage(i + 1),
+                                                    float(ratio),
+                                                    float(decimal.Decimal(PDF_MARGIN_WIDTH) + width_diff),
+                                                    float(decimal.Decimal(PDF_MARGIN_HEIGHT) + height_diff))
+
+                                    else:  # course text
+                                        if abs(decimal.Decimal(PDF_REF_WIDTH / PDF_REF_HEIGHT) - decimal.Decimal(width_slides / height_slides)) / decimal.Decimal(width_slides) >= 0.001:
+                                            # ratios are weird
+                                            NO_PROBLEMS = False
+                                            print(f'{full_path_file} course text doesn\t match ratio of A4.')
+
+                                        for i in range(slides.getNumPages()):
+                                            output.addPage(slides.getPage(i))
+
+                                    if self.rv and file != list_dir[-1] and output.getNumPages() % 2 == 0:
+                                        output.addBlankPage()
+                                else:
+                                    # One of the files is corrupt
+                                    print(f'{full_path_file} has no pages.')
+                                    NO_PROBLEMS = False
+                            else:
+                                # One of the files is not a PDF
+                                print(f'{full_path_file} is not a PDF.')
+                                NO_PROBLEMS = False
+                else:
+                    NO_PROBLEMS = False
+                    print(f'{self.barcode} does not yet have its new files.')
+
+            except Exception as e:
+                print('Catched exception', e)
+                NO_PROBLEMS = False
+
+            if NO_PROBLEMS:
+                #  get front page
+                self._pages_bw = output.getNumPages() + 1
+                r = requests.post('https://www.vtk.be/api/cudi/is-same', data=self.get_json())
+                front_page = r.json()['front_page']
+                url = 'https://www.vtk.be' + front_page
+                print(url)
+                response = requests.get(url)
+                p = io.BytesIO(response.content)
+                front = PdfFileReader(p)
+                output.insert_page(front.getPage(0))
+
+                file = "../Archief/" + cur_year + self.get_years_back(-1) + "/" + semester + "/" + str(
+                    self.barcode) + ".pdf"
+                with open(file, 'wb') as f:
+                    output.write(f)
+
+                print(f'{self.barcode} finished.')
+
+
 
     def get_json(self):
         if self.is_same:
@@ -134,7 +236,7 @@ class Cursus:
                         "sell_price": str(self.sell())
                      }
         else:
-            return{
+            return {
                         "key": "99783417c1b06c8b39ae8025f5bfc937",
                         "is_same": str(self.is_same),
                         "barcode": "978" + Cursus.get_years_back(1) + cur_year + str(self.barcode),
