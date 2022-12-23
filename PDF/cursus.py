@@ -8,7 +8,7 @@ import functools
 import decimal
 
 cur_year = str(datetime.now().year)[-2:]
-semester = "eerste_semester"
+semester = "tweede_semester"
 
 vast = 0.5
 buy_r = 0.0161
@@ -121,6 +121,7 @@ class Cursus:
             front_page = r.json()['front_page']
             url = 'https://www.vtk.be' + front_page
             print(url)
+
             response = requests.get(url)
             output = PdfFileWriter()
             p = io.BytesIO(response.content)
