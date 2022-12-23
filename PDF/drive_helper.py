@@ -43,21 +43,20 @@ index_site = 4
 index_color = 11
 index_rv = 12
 
-
-
-
 already_done = set()
+
 for i, row in enumerate(ws.iter_rows(min_row=2)):
 
     try:
         barcode = int(row[index_barcode].value)
     except Exception as e:
         barcode = -1
+
     try:
         if barcode != -1 and barcode not in already_done:
             already_done.add(barcode)
 
-        if row[index_name].value is not None and row[index_barcode].value is not None and (type(row[index_barcode].value) is float or type(row[index_barcode].value) is int or type(row[index_barcode].value) is str) and row[index_status].value is not None and row[index_site].value != "ok" and row[index_manueel].value is None:
+            if row[index_name].value is not None and row[index_barcode].value is not None and (type(row[index_barcode].value) is float or type(row[index_barcode].value) is int or type(row[index_barcode].value) is str) and row[index_status].value is not None and row[index_site].value != "ok" and row[index_manueel].value is None:
                     if row[index_status].value.lower().strip() == 'zelfde' or (row[index_status].value.lower().strip() == 'veranderd' and os.path.isdir('Veranderd/' + str(barcode))):
                         color = int(row[index_color].value)
                         rv = str(row[index_rv].value).strip().lower() == 'rv'
