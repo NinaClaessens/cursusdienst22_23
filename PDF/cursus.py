@@ -7,7 +7,7 @@ import io
 import functools
 import decimal
 
-cur_year = str(datetime.now().year)[-2:]
+cur_year = "22"
 semester = "tweede_semester"
 
 vast = 0.5
@@ -208,7 +208,7 @@ class Cursus:
 
             if NO_PROBLEMS:
                 #  get front page
-                self._pages_bw = output.getNumPages() + 1
+                self._pages_bw = output.getNumPages() + 1 - self.pages_col
                 r = requests.post('https://www.vtk.be/api/cudi/is-same', data=self.get_json())
                 front_page = r.json()['front_page']
                 url = 'https://www.vtk.be' + front_page

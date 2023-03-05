@@ -51,7 +51,6 @@ for i, row in enumerate(ws.iter_rows(min_row=2)):
         barcode = int(row[index_barcode].value)
     except Exception as e:
         barcode = -1
-
     try:
         if barcode != -1 and barcode not in already_done:
             already_done.add(barcode)
