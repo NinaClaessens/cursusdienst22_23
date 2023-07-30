@@ -1,20 +1,35 @@
 import openpyxl
 import cursus
-import os
 from pydrive2.auth import GoogleAuth
 from pydrive2.drive import GoogleDrive
+import os
 
 FILE_ID = "1YnnvC6OunBD5d8-ujuWxbr3jV1MH--ll"
 FOLDER_ID = "1a-7PkirJLUz-SxuRcQUdCuw1UZbnX35F"
+CREDENTIALS_FILE = "credentials.json"
 
 gauth = GoogleAuth()
-# gauth.LocalWebserverAuth()
+
+# Check if the credentials file exists
+if os.path.exists(CREDENTIALS_FILE):
+    # Load the saved credentials
+    gauth.LoadCredentialsFile(CREDENTIALS_FILE)
+else:
+    # If the credentials file does not exist, authenticate and save the credentials
+    gauth.LocalWebserverAuth()
+    gauth.SaveCredentialsFile(CREDENTIALS_FILE)
+
+# Refresh the access token if it's expired
+if gauth.access_token_expired:
+    gauth.Refresh()
+else:
+    # Initialize the saved creds
+    gauth.Authorize()
 
 drive = GoogleDrive(gauth)
 
 file = drive.CreateFile({'id': FILE_ID})
 file.GetContentFile('cursussen_sem2.xlsx', mimetype="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
-
 wb = openpyxl.load_workbook('cursussen_sem2.xlsx')
 ws = wb.active
 
@@ -71,5 +86,5 @@ for i, row in enumerate(ws.iter_rows(min_row=2)):
 
 print("Finished")
 wb.save('cursussen_adapted.xlsx')
-file.SetContentFile('cursussen_adapted.xlsx')
+file.SetContentFile('cursussen_sem2.xlsx')
 file.Upload()  # Upload the file.
