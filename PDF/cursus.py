@@ -6,7 +6,7 @@ import requests
 import io
 import functools
 import decimal
-
+import traceback
 from PyPDF2._utils import CompressedTransformationMatrix
 
 cur_year = "23"
@@ -160,7 +160,7 @@ class Cursus:
                                 if len(slides.pages) > 0:
                                     width_slides, height_slides = get_size(slides.pages[0])
 
-                                    if 1.2 * width_slides >= height_slides:  # slides, 2 per page
+                                    if decimal.Decimal(1.2) * width_slides >= height_slides:  # slides, 2 per page
                                         ratio_width = decimal.Decimal(PDF_WIDTH - PDF_MARGIN_WIDTH * 2) / width_slides
                                         ratio_height = decimal.Decimal(PDF_HEIGHT - PDF_MARGIN_HEIGHT * 3) / (2 * height_slides)
                                         ratio = min(ratio_height, ratio_width)
@@ -169,8 +169,6 @@ class Cursus:
                                         height_diff = (decimal.Decimal(PDF_HEIGHT - PDF_MARGIN_HEIGHT * 3) - height_slides * ratio * 2) / 4
 
                                         for i in range(0, len(slides.pages), 2):
-
-
                                             new_page = PageObject().create_blank_page(width=PDF_WIDTH, height=PDF_HEIGHT)
 
                                             if i + 1 < len(slides.pages):
@@ -193,7 +191,7 @@ class Cursus:
                                                 .scale(float(ratio))
                                                 .translate(
                                                     int(decimal.Decimal(PDF_MARGIN_WIDTH) + width_diff),
-                                                    int(ratio * height_slides + decimal.Decimal(
+                                                    int(decimal.Decimal(ratio) * height_slides + decimal.Decimal(
                                                         PDF_MARGIN_HEIGHT * 2) + height_diff * 3)
                                                 )
                                             )
