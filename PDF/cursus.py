@@ -1,11 +1,13 @@
 import math
 from datetime import datetime
 import os
-from PyPDF2 import PdfReader, PdfWriter, Transformation
+from PyPDF2 import PdfReader, PdfWriter, Transformation, PageObject
 import requests
 import io
 import functools
 import decimal
+
+from PyPDF2._utils import CompressedTransformationMatrix
 
 cur_year = "23"
 semester = "eerste_semester"
@@ -21,7 +23,7 @@ buy_rv_col = 0.1878
 sell_r_col = sell_r/buy_r * buy_r_col
 sell_rv_col = sell_r/buy_r * buy_rv_col
 
-PDF_WIDTH, PDF_HEIGHT = 595.275, 841.889
+PDF_WIDTH, PDF_HEIGHT = 595, 842
 PDF_REF_WIDTH, PDF_REF_HEIGHT = 210, 297
 PDF_REF_MARGIN = 5
 PDF_MARGIN_WIDTH = PDF_REF_MARGIN / PDF_REF_WIDTH * PDF_WIDTH
@@ -167,32 +169,42 @@ class Cursus:
                                         height_diff = (decimal.Decimal(PDF_HEIGHT - PDF_MARGIN_HEIGHT * 3) - height_slides * ratio * 2) / 4
 
                                         for i in range(0, len(slides.pages), 2):
-                                            new_page = output.add_blank_page(PDF_WIDTH, PDF_HEIGHT)
 
-                                            # calculate parameters
-                                            scale = float(ratio)
-                                            tx = float(decimal.Decimal(PDF_MARGIN_WIDTH) + width_diff)
-                                            ty = float(ratio * height_slides + decimal.Decimal(
-                                                PDF_MARGIN_HEIGHT * 2) + height_diff * 3)
 
-                                            # create Transformation object and add transformations
-                                            transform = Transformation().scale(scale).translate(tx, ty)
-                                            slides.pages[i].add_transformation(transform)
+                                            new_page = PageObject().create_blank_page(width=PDF_WIDTH, height=PDF_HEIGHT)
 
-                                            # merge pages
-                                            new_page.merge_page(slides.pages[i])
                                             if i + 1 < len(slides.pages):
+                                                slides.pages[i+1].mediabox.right = PDF_WIDTH
+                                                slides.pages[i+1].mediabox.top = PDF_HEIGHT
                                                 # calculate parameters
-                                                scale = float(ratio)
-                                                tx = float(decimal.Decimal(PDF_MARGIN_WIDTH) + width_diff)
-                                                ty = float(decimal.Decimal(PDF_MARGIN_HEIGHT) + height_diff)
+                                                op = (
+                                                    Transformation()
+                                                    .scale(float(ratio))
+                                                    .translate(
+                                                        int(decimal.Decimal(PDF_MARGIN_WIDTH) + width_diff),
+                                                        int(decimal.Decimal(PDF_MARGIN_HEIGHT) + height_diff)
+                                                    )
+                                                )
+                                                slides.pages[i+1].add_transformation(op)
+                                                new_page.merge_page(slides.pages[i+1])
 
-                                                # create Transformation object and add transformations
-                                                transform = Transformation().scale(scale).translate(tx, ty)
-                                                slides.pages[i + 1].add_transformation(transform)
+                                            op = (
+                                                Transformation()
+                                                .scale(float(ratio))
+                                                .translate(
+                                                    int(decimal.Decimal(PDF_MARGIN_WIDTH) + width_diff),
+                                                    int(ratio * height_slides + decimal.Decimal(
+                                                        PDF_MARGIN_HEIGHT * 2) + height_diff * 3)
+                                                )
+                                            )
 
-                                                # merge pages
-                                                new_page.merge_page(slides.pages[i + 1])
+                                            slides.pages[i].mediabox.right = PDF_WIDTH
+                                            slides.pages[i].mediabox.top = PDF_HEIGHT
+                                            slides.pages[i].add_transformation(op)
+                                            new_page.merge_page(slides.pages[i])
+
+                                            output.add_page(new_page)
+
 
                                     else:  # course text
                                         if abs(decimal.Decimal(PDF_REF_WIDTH / PDF_REF_HEIGHT) - decimal.Decimal(width_slides / height_slides)) / decimal.Decimal(width_slides) >= 0.001:
@@ -237,6 +249,7 @@ class Cursus:
                     self.barcode) + ".pdf"
                 with open(file, 'wb') as f:
                     output.write(f)
+
 
                 print(f'{self.barcode} finished.')
 
