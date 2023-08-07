@@ -1,23 +1,23 @@
 import math
 from datetime import datetime
 import os
-from PyPDF2 import PdfFileReader, PdfFileWriter
+from PyPDF2 import PdfReader, PdfWriter, Transformation
 import requests
 import io
 import functools
 import decimal
 
-cur_year = "22"
-semester = "tweede_semester"
+cur_year = "23"
+semester = "eerste_semester"
 
 vast = 0.5
-buy_r = 0.0161
-buy_rv = 0.0261
-sell_r = 0.0186
+buy_r = 0.0165
+buy_rv = 0.0267
+sell_r = buy_r*1.03
 sell_rv = buy_rv/buy_r * sell_r
 
-buy_r_col = 0.0916
-buy_rv_col = 0.17161
+buy_r_col = 0.0939
+buy_rv_col = 0.1878
 sell_r_col = sell_r/buy_r * buy_r_col
 sell_rv_col = sell_r/buy_r * buy_rv_col
 
@@ -29,7 +29,7 @@ PDF_MARGIN_HEIGHT = PDF_REF_MARGIN / PDF_REF_HEIGHT * PDF_HEIGHT
 
 
 def get_size(page):
-    return page.mediaBox.getWidth(), page.mediaBox.getHeight()
+    return page.mediabox.width, page.mediabox.height
 
 
 def custom_sort(x, y):
@@ -82,7 +82,7 @@ class Cursus:
     def pages_bw(self):
         if self._pages_bw == -1:
             if self.is_same:
-                self._pages_bw = self.previous_pdf().getNumPages() - self.pages_col
+                self._pages_bw = len(self.previous_pdf().pages) - self.pages_col
             else:
                 # TODO
                 pass
@@ -96,11 +96,11 @@ class Cursus:
                 file = folder + semester + "/" + str(self.barcode) + ".pdf"
                 if os.path.isfile(file):
                     self.f = open(file, "rb")
-                    self.pdf = PdfFileReader(self.f)
+                    self.pdf = PdfReader(self.f)
                 else:
                     return self.previous_pdf(years_back + 1)
             else:
-                raise 'Could not find file in archive ' + str(self.barcode)
+                raise Exception('Could not find file in archive ' + str(self.barcode))
         return self.pdf
 
     def buy(self):
@@ -123,17 +123,17 @@ class Cursus:
             print(url)
 
             response = requests.get(url)
-            output = PdfFileWriter()
+            output = PdfWriter()
             p = io.BytesIO(response.content)
-            front = PdfFileReader(p)
+            front = PdfReader(p)
 
-            if front.getNumPages() == 1:
-                output.addPage(front.getPage(0))
+            if len(front.pages) == 1:
+                output.add_page(front.pages[0])
 
             course = self.previous_pdf()
-            for i in range(course.getNumPages()):
+            for i in range(len(course.pages)):
                 if i != 0:
-                    output.addPage(course.getPage(i))
+                    output.add_page(course.pages[i])
 
             file = "../Archief/" + cur_year + self.get_years_back(-1) + "/" + semester + "/" + str(self.barcode) + ".pdf"
             with open(file, 'wb') as f:
@@ -144,9 +144,9 @@ class Cursus:
             NO_PROBLEMS = True
             try:
                 if os.path.isdir(path):
-                    output = PdfFileWriter()
+                    output = PdfWriter()
                     if self.rv:
-                        output.addBlankPage(PDF_WIDTH, PDF_HEIGHT)
+                        output.add_blank_page(PDF_WIDTH, PDF_HEIGHT)
 
                     list_dir = sorted(os.listdir(path), key=functools.cmp_to_key(custom_sort))
                     for file in list_dir:
@@ -154,9 +154,9 @@ class Cursus:
                             full_path_file = path + file
                             print(full_path_file)
                             if file[-4:] == ".pdf":
-                                slides = PdfFileReader(full_path_file, strict=False)
-                                if slides.getNumPages() > 0:
-                                    width_slides, height_slides = get_size(slides.getPage(0))
+                                slides = PdfReader(full_path_file, strict=False)
+                                if len(slides.pages) > 0:
+                                    width_slides, height_slides = get_size(slides.pages[0])
 
                                     if 1.2 * width_slides >= height_slides:  # slides, 2 per page
                                         ratio_width = decimal.Decimal(PDF_WIDTH - PDF_MARGIN_WIDTH * 2) / width_slides
@@ -166,18 +166,33 @@ class Cursus:
                                         width_diff = (decimal.Decimal(PDF_WIDTH - PDF_MARGIN_WIDTH * 2) - width_slides * ratio) / 2
                                         height_diff = (decimal.Decimal(PDF_HEIGHT - PDF_MARGIN_HEIGHT * 3) - height_slides * ratio * 2) / 4
 
-                                        for i in range(0, slides.getNumPages(), 2):
-                                            new_page = output.addBlankPage(PDF_WIDTH, PDF_HEIGHT)
+                                        for i in range(0, len(slides.pages), 2):
+                                            new_page = output.add_blank_page(PDF_WIDTH, PDF_HEIGHT)
 
-                                            new_page.mergeScaledTranslatedPage(slides.getPage(i), float(ratio),
-                                                                               float(decimal.Decimal(PDF_MARGIN_WIDTH) + width_diff),
-                                                                               float(ratio * height_slides + decimal.Decimal(PDF_MARGIN_HEIGHT * 2) + height_diff * 3))
-                                            if i + 1 < slides.getNumPages():
-                                                new_page.mergeScaledTranslatedPage(
-                                                    slides.getPage(i + 1),
-                                                    float(ratio),
-                                                    float(decimal.Decimal(PDF_MARGIN_WIDTH) + width_diff),
-                                                    float(decimal.Decimal(PDF_MARGIN_HEIGHT) + height_diff))
+                                            # calculate parameters
+                                            scale = float(ratio)
+                                            tx = float(decimal.Decimal(PDF_MARGIN_WIDTH) + width_diff)
+                                            ty = float(ratio * height_slides + decimal.Decimal(
+                                                PDF_MARGIN_HEIGHT * 2) + height_diff * 3)
+
+                                            # create Transformation object and add transformations
+                                            transform = Transformation().scale(scale).translate(tx, ty)
+                                            slides.pages[i].add_transformation(transform)
+
+                                            # merge pages
+                                            new_page.merge_page(slides.pages[i])
+                                            if i + 1 < len(slides.pages):
+                                                # calculate parameters
+                                                scale = float(ratio)
+                                                tx = float(decimal.Decimal(PDF_MARGIN_WIDTH) + width_diff)
+                                                ty = float(decimal.Decimal(PDF_MARGIN_HEIGHT) + height_diff)
+
+                                                # create Transformation object and add transformations
+                                                transform = Transformation().scale(scale).translate(tx, ty)
+                                                slides.pages[i + 1].add_transformation(transform)
+
+                                                # merge pages
+                                                new_page.merge_page(slides.pages[i + 1])
 
                                     else:  # course text
                                         if abs(decimal.Decimal(PDF_REF_WIDTH / PDF_REF_HEIGHT) - decimal.Decimal(width_slides / height_slides)) / decimal.Decimal(width_slides) >= 0.001:
@@ -185,11 +200,11 @@ class Cursus:
                                             NO_PROBLEMS = False
                                             print(f'{full_path_file} course text doesn\t match ratio of A4.')
 
-                                        for i in range(slides.getNumPages()):
-                                            output.addPage(slides.getPage(i))
+                                        for i in range(len(slides.pages)):
+                                            output.add_page(slides.pages[i])
 
-                                    if self.rv and file != list_dir[-1] and output.getNumPages() % 2 == 0:
-                                        output.addBlankPage()
+                                    if self.rv and file != list_dir[-1] and len(output.pages) % 2 == 0:
+                                        output.add_blank_page(PDF_WIDTH, PDF_HEIGHT)
                                 else:
                                     # One of the files is corrupt
                                     print(f'{full_path_file} has no pages.')
@@ -208,15 +223,15 @@ class Cursus:
 
             if NO_PROBLEMS:
                 #  get front page
-                self._pages_bw = output.getNumPages() + 1 - self.pages_col
+                self._pages_bw = len(output.pages) + 1 - self.pages_col
                 r = requests.post('https://www.vtk.be/api/cudi/is-same', data=self.get_json())
                 front_page = r.json()['front_page']
                 url = 'https://www.vtk.be' + front_page
                 print(url)
                 response = requests.get(url)
                 p = io.BytesIO(response.content)
-                front = PdfFileReader(p)
-                output.insert_page(front.getPage(0))
+                front = PdfReader(p)
+                output.insert_page(front.pages[0])
 
                 file = "../Archief/" + cur_year + self.get_years_back(-1) + "/" + semester + "/" + str(
                     self.barcode) + ".pdf"

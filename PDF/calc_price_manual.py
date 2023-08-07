@@ -1,9 +1,9 @@
 import math
 
 vast = 0.5
-buy_r = 0.0161
-buy_rv = 0.0261
-sell_r = 0.0186
+buy_r = 0.0165
+buy_rv = 0.0267
+sell_r = buy_r*1.03
 sell_rv = buy_rv/buy_r * sell_r
 
 Continue = True
